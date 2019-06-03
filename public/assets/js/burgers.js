@@ -22,7 +22,7 @@ $("#submit").on("click", function(event) {
 
 
 $(function() {
-  $("#devourbtn").on("click", function(event) {
+  $(".devourbtn").on("click", function(event) {
     var id = $(this).data("id");
     // var newDevour = $(this).data("newDevour");
 

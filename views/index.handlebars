@@ -16,7 +16,7 @@
         <h4>Enter a burger you want and click the “Submit” button</h4>
         <div class="form-field__control">
 
-          <textarea id="newBurger" class="form-field__textarea" ></textarea>
+          <textarea id="newBurger" class="form-field__textarea"></textarea>
 
           <a class="waves-effect waves-light btn" id="submit">
             <h5>submit</h5>
@@ -33,14 +33,18 @@
 
 
 <!-- Burger List -->
-<div class="row">
+<div class="container-fluid">
+  <div class="row equal" id="burgerListSection">
 
-  <div class="col s6" id="nom">
-    <h4 class="bottomTitle">Nom Nom </h4>
-    <ul>
-      {{#each burgers}}
-      {{#unless this.devoured}}
-      <li>
+
+    <div class="col s6" id="nom">
+
+      <h4 class="bottomTitle">Nom Nom </h4>
+      <table>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block }}
+        {{!-- <li>
         {{this.id}}
         {{this.burger_name}}
 
@@ -49,12 +53,13 @@
           <button class="btn-primary" type="submit" id = "devourbtn">Devour It!</button>
         </form>
 
-      </li>
-      {{/unless}}
-      {{/each}}
-    </ul>
+      </li> --}}
+        {{/unless}}
+        {{/each}}
+      </table>
 
-  </div>
+    </div>
+ 
 
 
 
@@ -62,17 +67,20 @@
   <div class="col s6" id="devouredList">
     <h4 class="bottomTitle">Devoured burgers </h4>
 
-    <ul>
+    <table>
       {{#each burgers}}
-      {{#if this.devoured}}
-      <li>
+      {{#if devoured}}
+      <div>{{id}}. {{burger_name}}</div>
+      {{!-- <li>
         {{this.id}}
         {{this.burger_name}}
 
-      </li>
+      </li> --}}
       {{/if}}
       {{/each}}
-    </ul>
+    </table>
+
   </div>
 
 </div>
+ </div>
