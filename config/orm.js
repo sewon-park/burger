@@ -55,12 +55,14 @@ var orm = {
     var queryString = "INSERT INTO " + table;
     queryString += " (";
     queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
     queryString += printQuestionMarks(vals.length);
-    queryString +=  " ) ";
+    queryString +=  ") ";
 
     console.log(queryString);
 
-    connection.query(queryString, function(err, result){
+    connection.query(queryString, vals, function(err, result){
       if(err){console.log(err)};
       cb(result);
     })
@@ -73,7 +75,8 @@ var orm = {
     queryString += objToSql(objColVals);
     queryString += " WHERE ";
     queryString += condition;
-
+    
+    console.log(queryString);
     connection.query(queryString, function(err, result){
       if(err){console.log(err)};
       cb(result);

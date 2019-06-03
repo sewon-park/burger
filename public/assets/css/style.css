@@ -1,0 +1,83 @@
+/* title line */
+#title{
+  background-color:#f57c00 ;
+  padding: 0;
+  margin:0;
+}
+
+h4{
+  color:white;
+  
+}
+
+
+
+
+/* burger submit section */
+.submitBurger{
+  background-image: url("image/burger2.JPG");
+  min-height:600px; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem;
+}
+
+.form-field {
+  margin:2rem;
+}
+
+.form-field__textarea{
+  width:100%;
+  margin-top:2rem;
+  color:white;
+}
+
+h4 {
+  color:white;
+  font-family: 'Play', sans-serif; 
+  
+}
+
+h5 {
+  color:white;
+  font-family: 'Play', sans-serif; 
+  padding:0.1rem; 
+}
+
+h6 {
+  color:white;
+  font-family: 'Play', sans-serif;  
+}
+.btn{
+  margin-top:2rem;
+  padding-top:0.1rem;
+  height:4rem;
+}
+
+/* Burger List */
+#nom{
+  background-color: #4db6ac;
+  min-height:300px;
+}
+
+.bottomTitle{
+  color:white;
+  font-family: 'Play', sans-serif;  
+  text-align:center;
+}
+
+li{
+  color:white;
+  font-size: 2rem;
+  font-family: 'Play', sans-serif;  
+  text-align:center;
+}
+#devourbtn{
+  font-family: 'Play', sans-serif;  
+}
+/* Devoured List */
+#devouredList{
+  background-color: #37474f;
+  min-height:300px;
+}

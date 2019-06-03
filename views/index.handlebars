@@ -1,0 +1,78 @@
+<div class="row" id="title">
+  <div class="col s12"><span class="flow-text">
+      <h4>Eat-da-burger! </h4>
+    </span>
+  </div>
+</div>
+
+
+
+<div class="submitBurger">
+  <div class="row">
+    <div class="col s5">
+
+
+      <div class="form-field">
+        <h4>Enter a burger you want and click the “Submit” button</h4>
+        <div class="form-field__control">
+
+          <textarea id="newBurger" class="form-field__textarea" ></textarea>
+
+          <a class="waves-effect waves-light btn" id="submit">
+            <h5>submit</h5>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Burger List -->
+<div class="row">
+
+  <div class="col s6" id="nom">
+    <h4 class="bottomTitle">Nom Nom </h4>
+    <ul>
+      {{#each burgers}}
+      {{#unless this.devoured}}
+      <li>
+        {{this.id}}
+        {{this.burger_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+          <button class="btn-primary" type="submit" id = "devourbtn">Devour It!</button>
+        </form>
+
+      </li>
+      {{/unless}}
+      {{/each}}
+    </ul>
+
+  </div>
+
+
+
+  <!-- Devoured List -->
+  <div class="col s6" id="devouredList">
+    <h4 class="bottomTitle">Devoured burgers </h4>
+
+    <ul>
+      {{#each burgers}}
+      {{#if this.devoured}}
+      <li>
+        {{this.id}}
+        {{this.burger_name}}
+
+      </li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+
+</div>
