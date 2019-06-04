@@ -1,7 +1,7 @@
 # Eat-da-burger
 A bugger logger app with Node.js/Express/MySQL/Handlebars/Materialize
 
-<img src ="screenshot/burger.jpg" width="700"> 
+<img src ="screenshot/burger.JPG" width="700"> 
 
 ## Description
 This application demonstrates a simple full stack application with a front end implemented with HTML/CSS and elements from the Materialize framework and the backend implemented with Node.js and Express. HTML templating rendered through Express - handlebars.
